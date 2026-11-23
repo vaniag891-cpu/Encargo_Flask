@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+
+    <!-- Enlace al archivo de estilos CSS  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css')}}">
+</head>
+<body>
+   <!-- Contenedor principal del menu -->
+   <div class="contenedor menu">
+
+       <!-- Encabezado de la aplicacion -->
+       <h1>Aplicacion de Ejercicios</h1>
+
+       <!-- Boton para acceder al ejercicio1 -->
+       <a href="/ejercicio1" class="boton">
+           Ejercicio1
+       </a>
+
+       <!-- Boton para acceder al ejercicio2 -->
+       <a href="/ejercicio2" class="boton">
+           Ejercicio2
+       </a>
+   </div>
+</body>
+</html>

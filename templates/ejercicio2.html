@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Nombres</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+   <!-- Contenedor principal del formulario-->
+   <div class="contenedor formulario">
+       <h1>Formulario de Nombres</h1>
+
+       <!-- Formulario para ingresar los tres nombres-->
+       <form action="/ejercicio2" method="post">
+
+           <!-- Ingreso del primer nombre-->
+           <label for="nombre1">Nombre 1:</label>
+           <input type="text" id="nombre1" name="nombre1" required>
+
+           <!-- Ingreso del segundo nombre-->
+           <label for="nombre1">Nombre 2:</label>
+           <input type="text" id="nombre2" name="nombre2" required>
+
+           <!-- Ingreso del tercer nombre-->
+           <label for="nombre1">Nombre 3:</label>
+           <input type="text" id="nombre3" name="nombre3" required>
+
+           <!-- Boton para enviar los datos-->
+           <button type="submit">Enviar</button>
+       </form>
+       <!-- Mostramos el resultado-->
+       {% if nombre_mayor is defined %}
+       <p>Nombre con mas caracteres: {{ nombre_mayor }}</p>
+       <p>Cantidad de caracteres: {{ cantidad }}</p>
+       {% endif %}
+   </div>
+</body>
+</html>
